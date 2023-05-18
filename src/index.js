@@ -1,49 +1,41 @@
 import { PageFlip } from "page-flip";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const pageFlip = new PageFlip(document.getElementById("demoBookExample"), {
-    width: 550, // base page width
-    height: 733, // base page height
+  const pageFlip = new PageFlip(document.getElementById("book"), {
+    width: 550,
+    height: 733,
 
     size: "stretch",
-    // set threshold values:
     minWidth: 315,
-    maxWidth: 1000,
+    maxWidth: 550,
     minHeight: 420,
     maxHeight: 1350,
 
-    maxShadowOpacity: 0.5, // Half shadow intensity
+    maxShadowOpacity: 0.5,
     showCover: true,
-    mobileScrollSupport: false, // disable content scrolling on mobile devices
+    mobileScrollSupport: false,
   });
 
-  // load pages
+  const docWidth = document.getElementById("book").offsetWidth;
+  [].forEach.call(document.querySelectorAll("*"), function (el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  });
+
   pageFlip.loadFromHTML(document.querySelectorAll(".page"));
 
   document.querySelector(".page-total").innerText = pageFlip.getPageCount();
-  document.querySelector(".page-orientation").innerText =
-    pageFlip.getOrientation();
 
   document.querySelector(".btn-prev").addEventListener("click", () => {
-    pageFlip.flipPrev(); // Turn to the previous page (with animation)
+    pageFlip.flipPrev();
   });
 
   document.querySelector(".btn-next").addEventListener("click", () => {
-    pageFlip.flipNext(); // Turn to the next page (with animation)
+    pageFlip.flipNext();
   });
 
-  // triggered by page turning
   pageFlip.on("flip", (e) => {
     document.querySelector(".page-current").innerText = e.data + 1;
-  });
-
-  // triggered when the state of the book changes
-  pageFlip.on("changeState", (e) => {
-    document.querySelector(".page-state").innerText = e.data;
-  });
-
-  // triggered when page orientation changes
-  pageFlip.on("changeOrientation", (e) => {
-    document.querySelector(".page-orientation").innerText = e.data;
   });
 });
