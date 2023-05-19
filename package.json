@@ -7,6 +7,10 @@
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html --public-url /book-catalog/"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olga-plotkina/book-catalog.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
