@@ -3,16 +3,16 @@ import { PageFlip } from "page-flip";
 document.addEventListener("DOMContentLoaded", function () {
   const pageFlip = new PageFlip(document.getElementById("book"), {
     width: 550,
-    height: 733,
+    height: 640,
 
     size: "stretch",
     minWidth: 315,
     maxWidth: 550,
     minHeight: 420,
-    maxHeight: 1350,
+    maxHeight: 700,
 
     maxShadowOpacity: 0.5,
-    showCover: true,
+    showCover: false,
     mobileScrollSupport: false,
   });
 
