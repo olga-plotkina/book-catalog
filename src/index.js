@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     height: 789,
 
     size: "stretch",
-    minWidth: 315,
+    minWith: 315,
+    minHeight: 367.6,
     maxWidth: 668.5,
-    minHeight: 420,
     maxHeight: 789,
 
     maxShadowOpacity: 0.5,
