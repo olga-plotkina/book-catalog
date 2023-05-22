@@ -2,14 +2,14 @@ import { PageFlip } from "page-flip";
 
 document.addEventListener("DOMContentLoaded", function () {
   const pageFlip = new PageFlip(document.getElementById("book"), {
-    width: 550,
-    height: 640,
+    width: 668.5,
+    height: 789,
 
     size: "stretch",
     minWidth: 315,
-    maxWidth: 550,
+    maxWidth: 668.5,
     minHeight: 420,
-    maxHeight: 640,
+    maxHeight: 789,
 
     maxShadowOpacity: 0.5,
     showCover: true,
