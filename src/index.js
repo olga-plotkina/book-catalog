@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     minWidth: 315,
     maxWidth: 550,
     minHeight: 420,
-    maxHeight: 700,
+    maxHeight: 640,
 
     maxShadowOpacity: 0.5,
     showCover: true,
