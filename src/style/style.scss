@@ -1,24 +1,43 @@
 @import "./base/normalize";
+@import "./base/breakpoints";
 
 .book-header {
-  height: 60px;
-  background-color: black;
+  @include for-desktop-up {
+    height: 60px;
+    background-color: black;
+  }
 }
 
 .container {
+  background-color: #839126;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 120px);
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #839126;
-}
+  height: calc(100vh - 30px);
 
-.flip-book {
-  // margin-left: auto;
-  // margin-right: auto;
+  @include for-tablet-up {
+    height: calc(100vh - 45px);
+    justify-content: center;
+    align-items: center;
+  }
+  @include for-desktop-up {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: calc(100vh - 100px);
+  }
+}
+.book-wrapper {
+  @include for-phone-up {
+    width: 100%;
+  }
+  @include for-tablet-up {
+    width: 768px;
+  }
+
+  @include for-desktop-up {
+    width: 1200px;
+  }
+}
+#book {
   // display: none;
   // box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
   background-size: cover;
@@ -97,10 +116,18 @@
 }
 
 .book-footer {
-  padding-top: 20px;
-  height: 60px;
   margin: 0;
+  height: 30px;
+
   background-color: black;
+  @include for-tablet-up {
+    padding-top: 10;
+    height: 45px;
+  }
+  @include for-desktop-up {
+    padding-top: 20px;
+    height: 60px;
+  }
 }
 .btn-container {
   display: flex;

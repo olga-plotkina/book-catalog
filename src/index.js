@@ -2,24 +2,33 @@ import { PageFlip } from "page-flip";
 
 document.addEventListener("DOMContentLoaded", function () {
   const pageFlip = new PageFlip(document.getElementById("book"), {
-    width: 668.5,
-    height: 789,
+    width: 550, // base page width
+    height: 733, // base page height
 
     size: "stretch",
-    minWith: 315,
-    minHeight: 367.6,
-    maxWidth: 668.5,
-    maxHeight: 789,
+    // set threshold values:
+    minWidth: 315,
+    maxWidth: 1000,
+    minHeight: 420,
+    maxHeight: 1350,
 
-    maxShadowOpacity: 0.5,
+    maxShadowOpacity: 0.5, // Half shadow intensity
     showCover: true,
-    mobileScrollSupport: false,
+    mobileScrollSupport: false, // disable content scrolling on mobile devices
   });
 
   const docWidth = document.getElementById("book").offsetWidth;
   [].forEach.call(document.querySelectorAll("*"), function (el) {
     if (el.offsetWidth > docWidth) {
       console.log(el);
+    }
+  });
+
+  window.addEventListener("resize", function (event) {
+    console.log("kuku", window.innerWidth);
+
+    if (window.innerWidth <= 480) {
+      pageFlip.update({ mode: "portrait" });
     }
   });
 
