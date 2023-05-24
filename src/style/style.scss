@@ -4,6 +4,7 @@
 .book-header {
   @include for-desktop-up {
     position: sticky;
+    z-index: 50;
     height: 60px;
     background-color: black;
   }
