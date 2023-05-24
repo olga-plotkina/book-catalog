@@ -116,13 +116,18 @@
 }
 
 .book-footer {
+  position: sticky;
   margin: 0;
-  height: 30px;
+  height: 60px;
+  padding-top: 10;
+  padding-bottom: 10;
 
   background-color: black;
   @include for-tablet-up {
     padding-top: 10;
-    height: 45px;
+    padding-bottom: 10;
+
+    height: 60px;
   }
   @include for-desktop-up {
     padding-top: 20px;
