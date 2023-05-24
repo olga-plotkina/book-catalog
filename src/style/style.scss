@@ -15,14 +15,14 @@
   height: calc(100vh - 30px);
 
   @include for-tablet-up {
-    height: calc(100vh - 45px);
+    height: calc(100vh - 30px);
     justify-content: center;
     align-items: center;
   }
   @include for-desktop-up {
     padding-top: 20px;
     padding-bottom: 20px;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 120px);
   }
 }
 .book-wrapper {
@@ -34,7 +34,7 @@
   }
 
   @include for-desktop-up {
-    width: 1200px;
+    width: 900px;
   }
 }
 #book {

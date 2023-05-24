@@ -2,8 +2,8 @@ import { PageFlip } from "page-flip";
 
 document.addEventListener("DOMContentLoaded", function () {
   const pageFlip = new PageFlip(document.getElementById("book"), {
-    width: 550, // base page width
-    height: 733, // base page height
+    width: 384, // base page width
+    height: 448, // base page height
 
     size: "stretch",
     // set threshold values:
