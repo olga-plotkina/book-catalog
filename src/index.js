@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // set threshold values:
     minWidth: 384,
     maxWidth: 1000,
-    minHeight: 420,
+    minHeight: 448,
     maxHeight: 1350,
 
     maxShadowOpacity: 0.5, // Half shadow intensity
