@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     maxShadowOpacity: 0.5, // Half shadow intensity
     showCover: true,
-    mobileScrollSupport: false, // disable content scrolling on mobile devices
+    mobileScrollSupport: true,
   });
 
   const docWidth = document.getElementById("book").offsetWidth;
