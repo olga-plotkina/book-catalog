@@ -24,7 +24,7 @@
   @include for-desktop-up {
     padding-top: 20px;
     padding-bottom: 20px;
-    height: 600px;
+    max-height: calc(100vh - 120px);
   }
 }
 .book-wrapper {
@@ -37,6 +37,7 @@
 
   @include for-desktop-up {
     width: 1200px;
+    max-height: 900px;
   }
 }
 #book {
