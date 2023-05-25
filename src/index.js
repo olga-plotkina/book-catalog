@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     minWidth: 384,
     maxWidth: 1000,
     minHeight: 448,
-    maxHeight: 900,
+    maxHeight: 600,
 
     maxShadowOpacity: 0.5, // Half shadow intensity
     showCover: true,
