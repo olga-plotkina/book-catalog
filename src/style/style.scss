@@ -21,7 +21,7 @@
 
   @include for-tablet-up {
     height: calc(100vh - 40px);
-    overflow-y: hidden;
+    overflow: hidden;
   }
   @include for-desktop-up {
     padding-top: 20px;
