@@ -17,9 +17,9 @@
   justify-content: center;
   align-items: center;
   height: calc(100vh - 50px);
-  overflow-y: scroll;
 
   @include for-tablet-up {
+    overflow-y: scroll;
     height: calc(100vh - 40px);
   }
   @include for-desktop-up {
